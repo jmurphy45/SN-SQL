@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SOCAIL NETWORK SQL</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+<body>
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top purple-background">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand page-scroll" href="#page-top">SQL Implantation</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <% if user_signed_in? %>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="pd-6">
+                <% if current_user.avatar.blank? %>
+                    <div class="dropdown">
+                      <button class="no-avatar dropbtn">
+                        <%= current_user.fname[0] + current_user.lname[0] %>
+                      </button>
+                      <div class="dropdown-content">
+                        <%= link_to "home", root_path %>
+                        <%= link_to "users", userlist_path %>
+                        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+                      </div>
+                    </div>
+                <% end %>
+              </li>
+            </ul>
+        <% else %>
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <%= link_to('Signup', new_user_registration_path) %>
+              </li>
+              <li>
+                <%= link_to('login', new_user_session_path) %>
+              </li>
+            </ul>
+        <% end %>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <%= yield %>
+
+</body>
+</html>
