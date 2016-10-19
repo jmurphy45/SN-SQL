@@ -12,7 +12,11 @@
  *
  *= require_tree .
  *= require_self
+ *= require commontator/application
  */
+body{
+    font-family: 'Raleway', sans-serif;
+}
 h2{
     margin:0;
 }

@@ -43,6 +43,9 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem "rails-erd"
+  gem 'railroady'
 end
 
 #authentication gem
@@ -53,4 +56,4 @@ gem 'annotate'
 #gem "avatarly"
 
 gem "socialization"
-gem "rails-erd"
+gem 'commontator', '~> 4.11.1'

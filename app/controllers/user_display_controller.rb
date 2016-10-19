@@ -5,7 +5,8 @@ class UserDisplayController < ApplicationController
   end
 
   def follow(user)
-    if current_user.follows?(user)
+    @user = current_user
+    if @user.follows?(user)
       return true
     else
       return false

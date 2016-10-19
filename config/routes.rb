@@ -62,7 +62,7 @@ Rails.application.routes.draw do
   get '/signup', to: 'user/session#new', as: 'signup'
 
   devise_scope :user do
-
+    mount Commontator::Engine => '/commontator'
     get '/users', to: 'user_display#index', as: 'userlist'
     get 'user/:username', to: 'profile#show', as: 'userprofile'
     root 'feed#show', as: 'feed_root'
