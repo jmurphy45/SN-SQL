@@ -30,8 +30,7 @@
               <li class="pd-6">
                 <% if current_user.avatar.blank? %>
                     <div class="dropdown">
-                      <button class="no-avatar dropbtn">
-                        <%= current_user.fname[0] + current_user.lname[0] %>
+                      <button class="dropbtn" style="background-image: url(<%= gravatar_url(current_user.email, 40) %>);">
                       </button>
                       <div class="dropdown-content">
                         <%= link_to "home", root_path %>

@@ -17,7 +17,7 @@
               <li class="media media-clearfix-xs" id="october">
                 <div class="media-left">
                   <div class="user-wrapper">
-                    <img src="http://placehold.it/80x80" alt="people" class="img-circle" width="80">
+                    <%= image_tag gravatar_url(current_user.email, 80), alt: "" , class: "img-circle" %>
                     <div><a href="#"><%=     @users.find(post.user_id).fname + " "+
                                              @users.find(post.user_id).lname[0]+"."%></a></div>
                     <div class="date"><%= post.created_at.strftime("%d") + " "+
