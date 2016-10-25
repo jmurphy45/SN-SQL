@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -46,6 +46,10 @@ group :development do
 
   gem "rails-erd"
   gem 'railroady'
+  
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+
 end
 
 #authentication gem
@@ -56,4 +60,6 @@ gem 'annotate'
 #gem "avatarly"
 
 gem "socialization"
+
 gem 'commontator', '~> 4.11.1'
+
