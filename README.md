@@ -1,6 +1,6 @@
 ## README
 
-[![Heroku](http://heroku-badge.herokuapp.com/?app=software-engineering-fa16&style=flat)](https://software-engineering-fa16.herokuapp.com/)
+[![Heroku](http://heroku-badge.herokuapp.com/?app=sn-sql&style=flat)](https://sn-sql.herokuapp.com)
 
 
 ### Iteration 1
