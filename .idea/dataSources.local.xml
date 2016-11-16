@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Sqlite (Xerial) - development.sqlite3" uuid="a04163e6-1819-4400-bbf7-b445c9dc56e5">
+    <data-source name="Sqlite (Xerial) - development.sqlite3 [2]" uuid="1866cd2d-ef49-4e65-ae28-4f5f9718c0e0">
       <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+    </data-source>
+    <data-source name="Rails sql-ss: test" uuid="9555c2c8-4d88-4d91-8914-79d6db261aac" />
+    <data-source name="Rails sql-ss: development" uuid="3895afcc-7b74-4eea-a456-1dc84c81ddd1">
       <auth-required>false</auth-required>
     </data-source>
   </component>

@@ -10,4 +10,7 @@
 
 class Post < ApplicationRecord
   validates :user_post, length: { minimum: 1 }
+
+  belongs_to :user
+  acts_as_commontable
 end

@@ -17,9 +17,9 @@
                 <div class="media-body">
                   <a href="#" class="pull-right text-muted"><i class="icon-reply-all-fill fa fa-2x "></i></a>
 
-                  <a href="">Jonathan</a>
+                  <a href=""><%= post.user.first_name + " " + post.user.last_name if post.user%></a>
 
-                  <span>on 15th January, 2014</span>
+                  <span><%= (post.created_at).to_formatted_s(:short) %></span>
                 </div>
               </div>
             </div>
@@ -31,13 +31,8 @@
 
 
 
-
             <div class="view-all-comments">
-              <a href="#">
-                <i class="fa fa-comments-o"></i> View all
-              </a>
-              <span>10 comments</span>
-
+              <%= commontator_thread(post) %>
             </div>
 
           </div>

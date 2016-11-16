@@ -57,3 +57,4 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 
 gem 'annotate'
 
+gem 'commontator', '~> 4.11.1'
