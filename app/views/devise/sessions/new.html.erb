@@ -1,0 +1,35 @@
+
+<div id="content">
+  <div class="container-fluid">
+
+    <div class="lock-container">
+      <h1>Account Access</h1>
+      <div class="panel panel-default text-center">
+        <img src="http://placehold.it/75x75" class="img-circle">
+        <div class="panel-body">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Email' %>
+              <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Enter Password' %>
+
+
+              <% if devise_mapping.rememberable? -%>
+                  <div class="form-group">
+                    <%= f.check_box :remember_me %>
+                    <%= f.label :remember_me %>
+                  </div>
+              <% end -%>
+
+              <div class="actions">
+                <%= f.submit "Log in", class: 'btn btn-primary' %>
+              </div>
+          <% end %>
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script>
+  $( "body" ).addClass( "login" );
+</script>

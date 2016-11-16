@@ -3,14 +3,11 @@
 # Table name: posts
 #
 #  id         :integer          not null, primary key
+#  user_post  :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  post       :text
-#  user_id    :integer
 #
 
-class Post < ActiveRecord::Base
-  belongs_to :user
-
-  acts_as_commontable
+class Post < ApplicationRecord
+  validates :user_post, length: { minimum: 1 }
 end

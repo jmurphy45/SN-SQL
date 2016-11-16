@@ -1,2 +1,0 @@
-module UserDisplayHelper
-end

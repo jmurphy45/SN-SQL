@@ -1,0 +1,21 @@
+Jay Murphy
+	Task 1: Set up user authentication
+	Description: Set up the user authentication for the website. Using the developed UML diagram from the planning phase develop a system for user authentication. If time permits add the functionality to sign in with other service providers.
+	Evaluate: Register and sign in a new user using the provided code. sign in with a user that has been already registered.
+
+	Task 2: Develop basic user interface
+	Description: Develop the basic HTML user interface for the website. so as feature are added it can by plug and chug.
+	Evaluate: SEe the site map for the basic pages and the HTML will be provided in an folder that will be named HTML.
+	
+	Task 3: Make a post
+	Description: Add post functionality that will allow users to post a message.
+	Evaluate: Seeded examples will be in database and then a default user can be signed in and test adding a post.
+
+Ben Murphy
+	Task 1: Post rating
+	Description: Create positive/negative rating system for posts so that users can have a net + or - for anyone they post about
+	Evalutate: Seeded posts will be in database and a default user can rate them positive or negative
+	
+	Task 2: Post tagging
+	Description: Posts can be tagged with a person's name, and the rating associated with that post will affect that person's overall rating
+	Evaluate: Seeded posts will have names attached to them, and changing the rating will change the name's overall value.

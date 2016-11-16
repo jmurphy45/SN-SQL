@@ -1,63 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SOCAIL NETWORK SQL</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>ZTeam</title>
   <%= csrf_meta_tags %>
 
-  <!-- Custom Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
+
 <body>
-  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top purple-background">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-        </button>
-        <a class="navbar-brand page-scroll" href="#page-top">SQL Implantation</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <% if user_signed_in? %>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="pd-6">
-                <% if current_user.avatar.blank? %>
-                    <div class="dropdown">
-                      <button class="dropbtn" style="background-image: url(<%= gravatar_url(current_user.email, 40) %>);">
-                      </button>
-                      <div class="dropdown-content">
-                        <%= link_to "home", root_path %>
-                        <%= link_to "users", userlist_path %>
-                        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-                      </div>
-                    </div>
-                <% end %>
-              </li>
-            </ul>
-        <% else %>
-            <ul class="nav navbar-nav navbar-right">
-              <li>
-                <%= link_to('Signup', new_user_registration_path) %>
-              </li>
-              <li>
-                <%= link_to('login', new_user_session_path) %>
-              </li>
-            </ul>
-        <% end %>
-      </div>
-      <!-- /.navbar-collapse -->
+<!-- Fluid navbar -->
+<div class="navbar navbar-main navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">brand</a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
     </div>
-    <!-- /.container-fluid -->
-  </nav>
+    <div class="navbar-collapse collapse" id="collapse">
+      <ul class="nav navbar-nav">
+        <% if user_signed_in? %>
+            <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete  %></li>
+        <%else%>
+            <li><%= link_to 'Signin', new_user_session_path  %></li>
+            <li><%= link_to 'Signup', new_user_registration_path  %></li>
+        <%end%>
+      </ul>
+    </div>
+  </div>
+</div>
 
-  <%= yield %>
-
+<div id="content">
+  <div class="container-fluid">
+    <%= yield %>
+  </div>
+</div>
 </body>
 </html>

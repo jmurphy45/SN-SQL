@@ -3,10 +3,9 @@
 # Table name: posts
 #
 #  id         :integer          not null, primary key
+#  user_post  :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  post       :text
-#  user_id    :integer
 #
 
 require 'test_helper'

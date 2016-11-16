@@ -1,0 +1,83 @@
+Title: Sign in
+Description: As a user, I want to sign in, so that I can access my account information and details
+Author: Jay Murphy
+Priority:
+Estimate:
+Status:
+
+Title: Sign up
+Description: As a user, I want to sign up, so that I can start posting on the website.
+Author: Jay Murphy
+Priority:
+Estimate:
+Status:
+
+Title:Title edit profile
+Description: As a user I would like to be able to edit my profile, so that I canI can keep my information up to date.
+Author: Jay Murphy
+Priority:
+Estimate:
+Status:
+
+Title:Assign memories
+Description: As a user I would like to assign memories as positive or negative, so that users can give feedback. 
+Author: Jay Murphy
+Priority:
+Estimate:
+Status:
+
+Title: User Login
+Description: As a customer, want to be able to log into the site via my email address because it would be easier to access my information.
+Author: Jared Thomas
+Priority:
+Estimate:
+Status:
+
+Title: Multiple Pictures
+Description: As a customer, want to be able to write a blog post and add multiple pictures because this would allow the blog post to look more creative. 
+Author: Jared Thomas
+Priority:
+Estimate:
+Status:
+
+Title: Signature on blog post
+Description: As a customer, want to be able to add a signatures to my blog post because it would look cool to be able to sign my post.
+Author: Jared Thomas
+Priority:
+Estimate:
+Status:
+
+Title: Background picture on blog post
+Description: As a customer, want to be able to add a background picture to my blog post because it would make the blog post look more interesting. 
+Author: Jared Thomas
+Priority:
+Estimate:
+Status:
+
+Title: Refine memories
+Description: As a user, I would like to have multiple values on both the positive or negative side, to more adequately describe someone based on how serious the positive/negative act is.
+Author: Ben Murphy
+Priority:
+Estimate:
+Status:
+
+Title: Filter people
+Description: As a user, I would like to filter people by positive/negative values to be able to view "only the best/worst" or similar categories of people.
+Author: Ben Murphy
+Priority:
+Estimate:
+Status:
+
+Title: Maintain different values
+Description: As a person potentially discussed on this site, I would like to have a separate positive/negative value for every user that posts about me, instead of all users contributing to the same score.
+Author: Ben Murphy
+Priority:
+Estimate:
+Status:
+
+Title: Tag multiple people
+Description: As a user, I would like to be able to associate a memory and its positive/negative value with multiple people in a single post, instead of having to make the same post/association multiple times over to describe something like a group activity.
+Author: Ben Murphy
+Priority:
+Estimate:
+Status:
