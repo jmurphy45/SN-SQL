@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   post :follows, to: "follows#destroy", as: :unfollow
 
   get '/follow', to: 'follows#index', as: 'follow_index'
+  get '/', to: 'user_feed#index', as: 'home_index'
   root 'user_feed#index'
 end

@@ -9,4 +9,5 @@ class UserFeedController < ApplicationController
       end
     end
   end
+
 end
