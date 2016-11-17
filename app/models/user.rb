@@ -5,4 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :posts
   acts_as_commontator
+
+  acts_as_followable
+  acts_as_follower
 end

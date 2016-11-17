@@ -58,3 +58,7 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'annotate'
 
 gem 'commontator', '~> 4.11.1'
+
+gem 'acts_as_follower'
+
+gem "font-awesome-rails"
