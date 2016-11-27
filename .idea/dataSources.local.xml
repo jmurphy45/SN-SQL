@@ -5,5 +5,8 @@
       <secret-storage>master_key</secret-storage>
       <auth-required>false</auth-required>
     </data-source>
+    <data-source name="Rails sql-ss: development" uuid="aa3fd535-9b2b-49d3-8f90-917e58aff2f7">
+      <auth-required>false</auth-required>
+    </data-source>
   </component>
 </project>

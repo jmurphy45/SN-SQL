@@ -1,66 +1,27 @@
-<div class="st-container">
-  <!-- sidebar effects OUTSIDE of st-pusher: -->
-  <!-- st-effect-1, st-effect-2, st-effect-4, st-effect-5, st-effect-9, st-effect-10, st-effect-11, st-effect-12, st-effect-13 -->
+<h3>All Users</h3>
+<br>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Follow</th>
+    </thead>
+    <tbody>
+    <% @users.try(:each) do |user| %>
+        <tr>
+          <td><%= user.first_name + " " + user.last_name %></td>
+          <td><%= user.email %></td>
+          <td>
+            <% if follow = user.follows.find_by(follows: user.id) %>
+                <%= link_to 'Unfollow', follows_path(:user => find_user(user)), method: :delete %>
 
-  <!-- content push wrapper -->
-  <div class="st-pusher" id="content">
-
-    <!-- sidebar effects INSIDE of st-pusher: -->
-    <!-- st-effect-3, st-effect-6, st-effect-7, st-effect-8, st-effect-14 -->
-
-    <!-- this is the wrapper for the content -->
-    <div class="st-content">
-
-      <!-- extra div for emulating position:fixed of the menu -->
-      <div class="st-content-inner">
-
-        <div class="container-fluid">
-
-          <div class="row" data-toggle="isotope">
-            <% @users.each do |user| %>
-                <% if current_user.id != user.id %>
-                <div class="col-md-6 col-lg-4 item">
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <div class="media">
-                        <div class="pull-left">
-                          <%= image_tag gravatar_url(user.email,50), class: 'media-object img-circle' %>
-                        </div>
-                        <div class="media-body">
-                          <h4 class="media-heading margin-v-5"><a href="#"><%= user.first_name + " " + user.last_name %></a></h4>
-                          <div class="profile-icons">
-                            <span><i class="fa fa-users"></i> <%= user.follow_count %></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="panel-footer">
-                      <% if current_user.follows(user) %>
-                          <%= form_tag follow_path do %>
-                              <%= hidden_field_tag "user_id", user.id %>
-                              <%= button_tag 'follow', class: 'btn btn-primary' %>
-                          <% end %>
-                      <% else %>
-                          <%= form_tag unfollow_path do %>
-                              <%= hidden_field_tag "user_id", user.id %>
-                              <%= button_tag 'unfollow', class: 'btn btn-alert' %>
-                          <% end %>
-                      <% end %>
-                    </div>
-                  </div>
-                </div>
-                <% end %>
+            <% else %>
+                <%= link_to 'Follow', follows_path({user_id: user.id}), method: 'post',class: "btn btn-primary"  %>
             <% end %>
-          </div>
-
-        </div>
-
-      </div>
-      <!-- /st-content-inner -->
-
-    </div>
-    <!-- /st-content -->
-
-  </div>
-  <!-- /st-pusher -->
-  </div>
+          </td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

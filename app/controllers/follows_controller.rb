@@ -1,14 +1,20 @@
 class FollowsController < ApplicationController
   def create
-    @user = User.find(params[:user_id])
-    current_user.follow(@user)
+    follow = Follow.new
+    follow.user_id = current_user.id
+    follow.follows = params[:user_id]
+    follow.save
     redirect_to root_path
   end
 
   def destroy
-    @user = User.find(params[:user_id])
-    current_user.stop_following(@user)
+    #@follow = Follow.where('user_id = ? AND follows = ?',current_user.id,params[:user_id]).first
+    @follow = params[:user]
+    p "follow to delete "+@follow
+    #@follow.destroy
+    redirect_to root_path
   end
+
   def index
     @users = User.all
   end
