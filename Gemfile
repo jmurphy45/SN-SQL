@@ -56,3 +56,4 @@ end
 gem 'devise'
 gem "font-awesome-rails"
 gem 'commontator', '~> 4.11.1'
+gem 'rails_12factor'
