@@ -14,7 +14,7 @@
           <td><%= user.email %></td>
           <td>
             <% if follow = user.follows.find_by(follows: user.id) %>
-                <%= link_to 'Unfollow', follows_path(:user => find_user(user)), method: :delete %>
+                <%= link_to 'Unfollow', follow_path(follow_rec(current_user, user)), method: :delete %>
 
             <% else %>
                 <%= link_to 'Follow', follows_path({user_id: user.id}), method: 'post',class: "btn btn-primary"  %>

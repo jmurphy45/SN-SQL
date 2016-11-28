@@ -8,10 +8,8 @@ class FollowsController < ApplicationController
   end
 
   def destroy
-    #@follow = Follow.where('user_id = ? AND follows = ?',current_user.id,params[:user_id]).first
-    @follow = params[:user]
-    p "follow to delete "+@follow
-    #@follow.destroy
+    @follow = Follow.find(params[:id])
+    @follow.destroy
     redirect_to root_path
   end
 
