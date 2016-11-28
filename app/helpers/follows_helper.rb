@@ -8,4 +8,7 @@ module FollowsHelper
     follow = Follow.where('user_id = ? AND follows = ?',current_user.id,follows.id).first
     return follow.id
   end
+  def gen_name(f,l)
+    return f + " " + l
+  end
 end
