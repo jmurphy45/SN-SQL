@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
+  get '/likes/:id', to: 'users#show', as: 'show_user'
   resources :likes
   #delete 'follows/:id' => 'follows#destroy'
   delete 'follows/:id' => 'follows#destroy'

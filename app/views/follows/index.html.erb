@@ -10,7 +10,7 @@
     <tbody>
     <% @users.try(:each) do |user| %>
         <tr>
-          <td><%= user.first_name + " " + user.last_name %></td>
+          <td><%= link_to user.first_name + " " + user.last_name,show_user_path(user.id) %></td>
           <td><%= user.email %></td>
           <td>
             <% if follow = user.follows.find_by(follows: user.id) %>

@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   def index
   end
   def show
-    @user = User.find_by_email(params[:id])
+    @user = User.find(params[:id])
+    @users = User.all
   end
 end
