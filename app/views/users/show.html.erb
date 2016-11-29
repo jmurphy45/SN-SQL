@@ -19,7 +19,6 @@
                   <h3><%= @user.first_name + " " + @user.last_name %></h3>
                   <% if follow = current_user.follows.find_by(follows: @user.id) %>
                       <%= link_to 'Unfollow', follow_path(follow_rec(current_user, @user)), method: :delete, class: "btn btn-primary" %>
-
                   <% else %>
                       <%= link_to 'Follow', follows_path({user_id: @user.id}), method: 'post', class: "btn btn-primary" %>
                   <% end %>
@@ -44,12 +43,25 @@
                 </ul>
               </div>
             </div>
+
+            <div class="col-md-6" style="width:170%;">
+              <div class="panel panel-default">
+                <div class="panel-heading panel-heading-gray">
+                  Following
+                </div>
+                <div class="panel-body">
+                  <ul>
+                    <% @who_follows.each do |follow| %>
+                      <li><%= link_to follow.first_name + " " + follow.last_name,show_user_path(follow.id) %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
-
-
       </div>
-
     </div>
     <!-- /st-content-inner -->
 
