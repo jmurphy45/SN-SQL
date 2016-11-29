@@ -13,7 +13,7 @@
           <td><%= link_to user.first_name + " " + user.last_name,show_user_path(user.id) %></td>
           <td><%= user.email %></td>
           <td>
-            <% if follow = user.follows.find_by(follows: user.id) %>
+            <% if follow = user_follows(current_user, user) %>
                 <%= link_to 'Unfollow', follow_path(follow_rec(current_user, user)), method: :delete %>
 
             <% else %>
