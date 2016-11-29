@@ -283,6 +283,9 @@ textarea {
     font: inherit;
     margin: 0;
 }
+.view-all-comments textarea{
+    color: #0d0d0d;
+}
 button {
     overflow: visible;
 }

@@ -1,4 +1,9 @@
-<%= render 'posts/form', post: @post %>
-<% @posts.each do |post| %>
-    <%= render 'posts/post', post: post %>
-<% end %>
+
+<div class="timeline row card-columns" data-isotope='{ "itemSelector": ".item", "masonry": {"layoutMode": "packery" } }'>
+  <div class="col-xs-12 col-md-6 col-lg-4 item">
+    <%= render 'posts/form', post: @post %>
+  </div>
+  <% @posts.each do |post| %>
+      <%= render 'posts/post', post: post %>
+  <% end %>
+</div>

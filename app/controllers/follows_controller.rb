@@ -4,13 +4,13 @@ class FollowsController < ApplicationController
     follow.user_id = current_user.id
     follow.follows = params[:user_id]
     follow.save
-    redirect_to root_path
+    redirect_to follows_path
   end
 
   def destroy
     @follow = Follow.find(params[:id])
     @follow.destroy
-    redirect_to root_path
+    redirect_to follows_path
   end
 
   def index

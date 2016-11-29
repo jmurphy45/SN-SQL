@@ -12,7 +12,7 @@
                 <div class="media-body">
                   <a href="#" class="pull-right text-muted"><i class="icon-reply-all-fill fa fa-2x "></i></a>
 
-                  <a href=""><%= post.user.email if post.user %></a>
+                  <a href=""><%= post.user.first_name + " " + post.user.last_name if post.user %></a>
 
                   <span><%= (post.created_at).to_formatted_s(:short) %></span>
                 </div>
@@ -20,6 +20,9 @@
             </div>
             <div class="panel-body">
               <p><%= post.post_text %></p>
+              <% if post.user_id == current_user.id %>
+                  <p></p><%= link_to 'Delete',  post,  method: :delete, data: { confirm: 'Are you sure?' } %></p>
+              <% end %>
               <% if like = post.likes.find_by(user_id: current_user.id) %>
                   <%= link_to '<i class="fa fa-thumbs-down" aria-hidden="true"></i> Unlike'.html_safe, like, method: 'delete',class: ""  %>
               <% else %>
@@ -32,4 +35,3 @@
           </div>
         </div>
       </div>
-</div>
